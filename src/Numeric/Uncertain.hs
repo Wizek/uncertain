@@ -546,9 +546,9 @@ instance Floating a => Floating (Uncert a) where
     {-# INLINE atanh #-}
 
 instance Eq a => Eq (Uncert a) where
-    (==) = (==) `on` uMean
+    (==) = (==) `on` uMeanStd
     {-# INLINE (==) #-}
-    (/=) = (/=) `on` uMean
+    (/=) = (/=) `on` uMeanStd
     {-# INLINE (/=) #-}
 
 instance Ord a => Ord (Uncert a) where
